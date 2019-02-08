@@ -2,13 +2,17 @@ console.log('js is working');
 
 $(document).ready(onReady);
 
+
 function onReady() {
     $('#playerNameButton').on('click', runAddPlayerFunction)
+    $('#uL').append(runAddPlayerFunction)
+   
+    
     $.ajax({
         type: 'GET',
         url: '/players'
     }).then(function (taco) { //the response is the object array
-        $('#uL').empty();
+        $('#playerNameValueIn').empty();
         for (let i = 0; i < taco.length; i++) {
             $('#playerNameValueIn').append(`
                         <li>${taco[i].playerName}</li>
