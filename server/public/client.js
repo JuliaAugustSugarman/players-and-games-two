@@ -34,7 +34,7 @@ function runAddPlayerFunction() {
             type: 'GET',
             url: '/players'
         }).then(function (taco) { //the response is the object array
-            $('#playerNameValueIn').empty();
+            $('#uL').empty();
             for (let i = 0; i < taco.length; i++) {
                     $('#uL').append(`
                         <li>${taco[i].playerName}</li>
