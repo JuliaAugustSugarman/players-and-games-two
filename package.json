@@ -1,0 +1,18 @@
+{
+  "name": "players-and-games_two",
+  "version": "1.0.0",
+  "description": "We are creating an application to track players and the results of the games they play against one another.",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "start": "node server/server.js"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
