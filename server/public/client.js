@@ -8,9 +8,9 @@ function onReady() {
         type: 'GET',
         url: '/players'
     }).then(function (taco) { //the response is the object array
-      
+        $('#uL').empty();
         for (let i = 0; i < taco.length; i++) {
-            $('#uL').append(`
+            $('#playerNameValueIn').append(`
                         <li>${taco[i].playerName}</li>
                     `);
         } //end for loop
