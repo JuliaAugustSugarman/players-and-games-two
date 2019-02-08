@@ -4,6 +4,7 @@
   "description": "We are creating an application to track players and the results of the games they play against one another.",
   "main": "index.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4"
   },
   "devDependencies": {},

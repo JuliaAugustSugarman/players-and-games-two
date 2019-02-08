@@ -1,3 +1,3 @@
-module.exports = playersRoster = [{name: 'Jullia'},{name: 'CK'}]
+module.exports = playersRoster = [{playerName: 'Jullia'}]
 
 

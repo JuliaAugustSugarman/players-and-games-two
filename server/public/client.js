@@ -4,33 +4,33 @@ $(document).ready(onReady);
 
 function onReady() {
     $('#playerNameButton').on('click', runAddPlayerFunction)
-    
+
 }
 
 
-function runAddPlayerFunction(){
+function runAddPlayerFunction() {
     console.log('player add button clicked');
     let playerName = $('#playerNameValueIn').val();
     console.log(playerName);
 
-    $.ajax({    
+    $.ajax({
         url: '/new',
         type: 'POST',
-        data: { 
-            playerName: $('#playerNameVlueIn').val(),
-        }).then(function (){
-            $.ajax({
-                type: 'GET',
-                url: '/players'
-            }).then(function (response) {
-                $('#wolfTableBody').empty();
-                response.forEach(function (wolf) {
-                    $('#wolfTableBody').append(`
-                    <tr>
-                    <td>${wolves.commonName}</td>
-                    <td>${wolves.scientificName}</td>
-                    </tr>
-                            `);
-        });
-    });
-}); 
+        data: {
+            playerName: $('#playerNameValueIn').val(),
+        }
+    }).then(function() {
+        $.ajax({
+            type: 'GET',
+            url: '/players'
+        }).then(function (taco) { //the response is the object array
+            $('#playerNameValueIn').empty();
+            for (let i = 0; i < taco.length; i++) {
+                    $('#uL').append(`
+                        <li>${taco[i].name}</li>
+                    `);
+            } //end for loop
+            }) //end then function 2
+        })//end then function 1
+    
+}//end runAdd Player function
