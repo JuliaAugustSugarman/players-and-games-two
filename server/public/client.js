@@ -4,8 +4,18 @@ $(document).ready(onReady);
 
 function onReady() {
     $('#playerNameButton').on('click', runAddPlayerFunction)
-
-}
+    $.ajax({
+        type: 'GET',
+        url: '/players'
+    }).then(function (taco) { //the response is the object array
+      
+        for (let i = 0; i < taco.length; i++) {
+            $('#uL').append(`
+                        <li>${taco[i].playerName}</li>
+                    `);
+        } //end for loop
+        
+})
 
 
 function runAddPlayerFunction() {
@@ -27,10 +37,11 @@ function runAddPlayerFunction() {
             $('#playerNameValueIn').empty();
             for (let i = 0; i < taco.length; i++) {
                     $('#uL').append(`
-                        <li>${taco[i].name}</li>
+                        <li>${taco[i].playerName}</li>
                     `);
             } //end for loop
             }) //end then function 2
         })//end then function 1
     
-}//end runAdd Player function
+    }//end runAdd Player
+}
