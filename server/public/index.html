@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 50%;
+    }
+  
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+    
+    }
+  
+  
+  </style>
     
     <title>Players And Games</title>
     <script src="jQuery.js"></script>
@@ -25,5 +41,58 @@
 
     </div>
     
+    <div>
+<h1>Games</h1>
+
+
+ <p>Players <select>
+  <optgroup label="Players">
+    <option>Marifel</option>
+    <option>CK</option>
+  </optgroup>
+</select>
+ Versus Opponent <select>
+  <optgroup label="Opponent Players">
+    <option>Rudolph</option>
+    <option>Sunny</option>
+  </optgroup>
+</select></p>
+
+
+
+
+
+
+
+
+<p>Player Score:
+<input id="playerScoreInputBox" type= "number" name="Player Score">
+Opponent Score:
+<input id="opponentScoreInputBox" type= "number" name="Opponent Score">
+</p>
+<button>Add Game</button>
+
+<table>
+  <tr>
+    <th>Player Name</th>
+    <th>Player Score</th>
+    <th>Opponent Name</th>
+    <th>Opponent Score</th>
+    <th>Winner</th>
+  </tr>
+  <tr>
+    <td>Marifel</td>
+    <td>8</td>
+    <td>Rohnda</td>
+    <td>7</td>
+    <td>Marifel</td>
+  </tr>
+
+
+
+
+
+
+    </div>
 </body>
 </html>
